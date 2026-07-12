@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://cm8brr1wuim5v"]
+
+[ext_resource type="Script" uid="uid://c5kqtoiht3dld" path="res://AppBuild/Scripts/shortcut_panel.gd" id="1_i54pf"]
+[ext_resource type="PackedScene" uid="uid://bidt51ay6nrqb" path="res://AppBuild/Scenes/configuracion.tscn" id="2_pakqa"]
+[ext_resource type="PackedScene" uid="uid://bwxtjou1jxuo3" path="res://AppBuild/Scenes/info.tscn" id="3_hsxam"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w3s2o"]
+
+[node name="Shortcut_Panel" type="Control" unique_id=1860198136]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i54pf")
+
+[node name="Panel" type="Panel" parent="." unique_id=1366497631]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.80100006
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 0.27996826
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=91055907 groups=["Margin_screen"]]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 33
+theme_override_constants/margin_top = 144
+theme_override_constants/margin_right = 33
+theme_override_constants/margin_bottom = 144
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer" unique_id=500691481]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/MarginContainer/VBoxContainer" unique_id=1236125663]
+layout_mode = 2
+theme_override_font_sizes/bold_font_size = 42
+bbcode_enabled = true
+text = "[b]Atajos"
+fit_content = true
+horizontal_alignment = 2
+
+[node name="HSeparator" type="HSeparator" parent="Panel/MarginContainer/VBoxContainer" unique_id=1113077638]
+layout_mode = 2
+theme_override_constants/separation = 55
+theme_override_styles/separator = SubResource("StyleBoxEmpty_w3s2o")
+
+[node name="Button_hide" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=1556683997]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "Ocultar"
+
+[node name="Button_settings" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=2145532223]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "Configuración"
+
+[node name="Button_historial" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=1206658408]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "Mostrar Historial"
+
+[node name="Button_info" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=1459378819]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "Acerca de"
+
+[node name="Button_quit" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=1837029568]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "Salir"
+
+[node name="Configuracion" parent="." unique_id=820676672 instance=ExtResource("2_pakqa")]
+visible = false
+layout_mode = 1
+
+[node name="Info" parent="." unique_id=630797216 instance=ExtResource("3_hsxam")]
+visible = false
+layout_mode = 1
+
+[connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/Button_hide" to="." method="_on_button_hide_pressed"]
+[connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/Button_settings" to="." method="_on_button_settings_pressed"]
+[connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/Button_info" to="." method="_on_button_info_pressed"]
+[connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/Button_quit" to="." method="_on_button_quit_pressed"]

@@ -1,0 +1,232 @@
+[gd_scene format=3 uid="uid://g8hwveganc1u"]
+
+[ext_resource type="Texture2D" uid="uid://bcsskucq2y227" path="res://AppBuild/Assets/UI/TENMXDS_Icon02.png" id="1_7xwre"]
+[ext_resource type="Script" uid="uid://i7xqlg1aotly" path="res://AppBuild/Scripts/intro_startup.gd" id="1_nnl61"]
+[ext_resource type="Texture2D" uid="uid://kypm6lsilvld" path="res://AppBuild/Assets/UI/TENMX_SAPP_LogoB-White.png" id="2_nnl61"]
+[ext_resource type="FontFile" uid="uid://dm7coon2krr7d" path="res://AppBuild/Assets/UI/font/Saira-SemiBoldItalic.ttf" id="4_hn26o"]
+[ext_resource type="Texture2D" uid="uid://cp62tl1w25fd1" path="res://AppBuild/Assets/UI/TENMXDS_Icon01.png" id="5_48bqe"]
+[ext_resource type="Texture2D" uid="uid://qr755b6bblrt" path="res://AppBuild/Assets/UI/TENMX_SAPP_LogoB-Color1.png" id="6_st0ud"]
+[ext_resource type="Texture2D" uid="uid://bioukfrobn5nw" path="res://AppBuild/Assets/UI/TENMX_SAPP_LogoB-Color2.png" id="7_e2tay"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hn26o"]
+
+[node name="Intro" type="Control" unique_id=1418773614]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nnl61")
+
+[node name="Default_splash" type="Panel" parent="." unique_id=1197129307]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_hn26o")
+
+[node name="ColorRect" type="ColorRect" parent="Default_splash" unique_id=980914570]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.28196582, 0.75163317, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Default_splash" unique_id=970054051]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -131.0
+offset_top = -245.0
+offset_right = 131.0
+offset_bottom = 245.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 44
+
+[node name="TextureRect" type="TextureRect" parent="Default_splash/VBoxContainer" unique_id=1304551055]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("1_7xwre")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="Default_splash/VBoxContainer" unique_id=884775347]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("2_nnl61")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Sign" type="RichTextLabel" parent="Default_splash" unique_id=153356693]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -231.0
+offset_top = -202.0
+offset_right = 231.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/italics_font = ExtResource("4_hn26o")
+theme_override_font_sizes/italics_font_size = 64
+bbcode_enabled = true
+text = "[i]Zafiro Calc"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Modern_splash" type="Panel" parent="." unique_id=1582157030]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_hn26o")
+
+[node name="ColorRect" type="ColorRect" parent="Modern_splash" unique_id=980133564]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.71332324, 0.71212864, 0.7088712, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Modern_splash" unique_id=793301160]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -131.0
+offset_top = -245.0
+offset_right = 131.0
+offset_bottom = 245.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 44
+
+[node name="TextureRect" type="TextureRect" parent="Modern_splash/VBoxContainer" unique_id=1793159494]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("5_48bqe")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="Modern_splash/VBoxContainer" unique_id=178202736]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("6_st0ud")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Sign" type="RichTextLabel" parent="Modern_splash" unique_id=1408410830]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -231.0
+offset_top = -202.0
+offset_right = 231.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/default_color = Color(0.099985994, 0.099985994, 0.099985994, 1)
+theme_override_fonts/italics_font = ExtResource("4_hn26o")
+theme_override_font_sizes/italics_font_size = 64
+bbcode_enabled = true
+text = "[i]Zafiro Calc"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Black_splash" type="Panel" parent="." unique_id=1442829612]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_hn26o")
+
+[node name="ColorRect" type="ColorRect" parent="Black_splash" unique_id=859848335]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.1148968, 0.11489681, 0.1148968, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Black_splash" unique_id=57576722]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -131.0
+offset_top = -245.0
+offset_right = 131.0
+offset_bottom = 245.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 44
+
+[node name="TextureRect" type="TextureRect" parent="Black_splash/VBoxContainer" unique_id=1183975835]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("5_48bqe")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="Black_splash/VBoxContainer" unique_id=64786252]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("7_e2tay")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Sign" type="RichTextLabel" parent="Black_splash" unique_id=941418194]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -231.0
+offset_top = -202.0
+offset_right = 231.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/italics_font = ExtResource("4_hn26o")
+theme_override_font_sizes/italics_font_size = 64
+bbcode_enabled = true
+text = "[i]Zafiro Calc"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1

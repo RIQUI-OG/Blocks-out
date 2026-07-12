@@ -1,0 +1,121 @@
+[gd_scene format=3 uid="uid://bwxtjou1jxuo3"]
+
+[ext_resource type="Theme" uid="uid://bfip020jp82km" path="res://AppBuild/Items/Modern_theme.tres" id="1_7pw25"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tiovw"]
+
+[node name="Info" type="Control" unique_id=630797216]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_7pw25")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=416703077]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.1254902, 0.12941177, 0.13333334, 1)
+
+[node name="MARGIN" type="MarginContainer" parent="." unique_id=1280259852]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="MARGIN" unique_id=190694731]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_tiovw")
+
+[node name="MarginContainer" type="MarginContainer" parent="MARGIN/Panel" unique_id=717699504]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 33
+theme_override_constants/margin_top = 33
+theme_override_constants/margin_right = 33
+theme_override_constants/margin_bottom = 33
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MARGIN/Panel/MarginContainer" unique_id=1332901805]
+layout_mode = 2
+
+[node name="Titulo" type="RichTextLabel" parent="MARGIN/Panel/MarginContainer/VBoxContainer" unique_id=139941491]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 44
+theme_override_font_sizes/bold_font_size = 44
+bbcode_enabled = true
+text = "[b]ACERCA DE"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MARGIN/Panel/MarginContainer/VBoxContainer" unique_id=684962928]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 10.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MARGIN/Panel/MarginContainer/VBoxContainer/ScrollContainer" unique_id=742508578]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 30
+
+[node name="Info" type="RichTextLabel" parent="MARGIN/Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1966127836]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 38
+bbcode_enabled = true
+text = "Zafiro Calculadora es una aplicación de productividad cotidiana, puedes usar la app como una calculadora normal o expandirla con sus diferentes estilos como Cientifica, Peso, Calcular fechas o tiempo."
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="Credits" type="RichTextLabel" parent="MARGIN/Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1254463194]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 38
+bbcode_enabled = true
+text = "DESARROLLADA EN:
+TENMX SOFTWARE, APLICACIÓN Y PRODUCCIÓN
+
+EQUIPO DE DESARROLLO ENCARGADO (PRODUCCIÓN):
+Antonio Romero
+TuxedoMask
+Ricardo Pérez
+
+INTERFACES GRÁFICAS:
+Antonio Romero
+
+PROGRAMACIÓN:
+Antonio Romero
+
+VERSIÓN:
+0.2 InDev
+
+SERVIDOR DE ACTUALIZACIONES:
+FreezyCore System v1.0.33
+
+PUBLICADORA:
+TENMX DEVELOPMENT STUDIOS
+
+AGRADECIMIENTOS ESPECIALES:
+GODOT ENGINE"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="ButtonCloseInfo" type="Button" parent="MARGIN/Panel/MarginContainer/VBoxContainer" unique_id=657947420]
+layout_mode = 2
+size_flags_vertical = 3
+theme_type_variation = &"Resaltado_bt_3"
+theme_override_font_sizes/font_size = 40
+text = "Cerrar"

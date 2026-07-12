@@ -1,0 +1,408 @@
+[gd_scene format=3 uid="uid://c47hjfsw15dfa"]
+
+[ext_resource type="Theme" uid="uid://bfip020jp82km" path="res://AppBuild/Items/Modern_theme.tres" id="1_4gy8t"]
+[ext_resource type="Script" uid="uid://lmkd3e38dpmw" path="res://AppBuild/Scripts/cbasis_logic.gd" id="1_mat6j"]
+[ext_resource type="Script" uid="uid://coyg3r60510gp" path="res://AppBuild/Scripts/main_canva.gd" id="4_kwtav"]
+[ext_resource type="PackedScene" uid="uid://cm8brr1wuim5v" path="res://AppBuild/Scenes/shortcut_panel.tscn" id="5_4gy8t"]
+[ext_resource type="Script" uid="uid://cpc38rcu5fu8n" path="res://AppBuild/Scripts/margin_screen.gd" id="5_qufc7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xm281"]
+
+[node name="Calculadora" type="Control" unique_id=367779374]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_4gy8t")
+script = ExtResource("4_kwtav")
+
+[node name="Fondo" type="ColorRect" parent="." unique_id=1468957276]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.19076231, 0.19076234, 0.19076231, 1)
+
+[node name="MARGIN_SCREEN" type="MarginContainer" parent="." unique_id=1075797933 groups=["Margin_screen"]]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+script = ExtResource("5_qufc7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MARGIN_SCREEN" unique_id=411997093]
+layout_mode = 2
+
+[node name="Panel_Modos" type="Panel" parent="MARGIN_SCREEN/VBoxContainer" unique_id=913394147]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.08
+
+[node name="Hbox" type="HBoxContainer" parent="MARGIN_SCREEN/VBoxContainer/Panel_Modos" unique_id=1576370251]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="MARGIN_SCREEN/VBoxContainer/Panel_Modos/Hbox" unique_id=1160006550]
+custom_minimum_size = Vector2(99, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 44
+disabled = true
+text = "<"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MARGIN_SCREEN/VBoxContainer/Panel_Modos/Hbox" unique_id=114400074]
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MARGIN_SCREEN/VBoxContainer/Panel_Modos/Hbox/ScrollContainer" unique_id=1510337247]
+custom_minimum_size = Vector2(1320, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="BT_Basic" type="Button" parent="MARGIN_SCREEN/VBoxContainer/Panel_Modos/Hbox/ScrollContainer/HBoxContainer" unique_id=1598442932]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"Resaltado_bt_3"
+theme_override_font_sizes/font_size = 45
+text = "Básica"
+
+[node name="BT_AdvancedMode" type="Button" parent="MARGIN_SCREEN/VBoxContainer/Panel_Modos/Hbox/ScrollContainer/HBoxContainer" unique_id=1599320430]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"Resaltado_bt_3"
+theme_override_font_sizes/font_size = 45
+toggle_mode = true
+text = "Avanzada"
+
+[node name="BT_Cientific" type="Button" parent="MARGIN_SCREEN/VBoxContainer/Panel_Modos/Hbox/ScrollContainer/HBoxContainer" unique_id=430192400]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"Resaltado_bt_3"
+theme_override_font_sizes/font_size = 45
+disabled = true
+text = "Cientifica"
+
+[node name="BT_Mass" type="Button" parent="MARGIN_SCREEN/VBoxContainer/Panel_Modos/Hbox/ScrollContainer/HBoxContainer" unique_id=1217618624]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"Resaltado_bt_3"
+theme_override_font_sizes/font_size = 45
+disabled = true
+text = "Peso"
+
+[node name="BT_Divisa" type="Button" parent="MARGIN_SCREEN/VBoxContainer/Panel_Modos/Hbox/ScrollContainer/HBoxContainer" unique_id=360086935]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"Resaltado_bt_3"
+theme_override_font_sizes/font_size = 45
+disabled = true
+text = "Divisas"
+
+[node name="BT_Graphic" type="Button" parent="MARGIN_SCREEN/VBoxContainer/Panel_Modos/Hbox/ScrollContainer/HBoxContainer" unique_id=2017171607]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"Resaltado_bt_3"
+theme_override_font_sizes/font_size = 45
+disabled = true
+text = "Gráfica"
+
+[node name="BT_Calendar" type="Button" parent="MARGIN_SCREEN/VBoxContainer/Panel_Modos/Hbox/ScrollContainer/HBoxContainer" unique_id=1215910298]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"Resaltado_bt_3"
+theme_override_font_sizes/font_size = 45
+disabled = true
+text = "Fechas"
+
+[node name="Button2" type="Button" parent="MARGIN_SCREEN/VBoxContainer/Panel_Modos/Hbox" unique_id=1342706751]
+custom_minimum_size = Vector2(99, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 44
+disabled = true
+text = ">"
+
+[node name="Calc_Basis" type="PanelContainer" parent="MARGIN_SCREEN/VBoxContainer" unique_id=1485743608]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("1_mat6j")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MARGIN_SCREEN/VBoxContainer/Calc_Basis" unique_id=270898736]
+layout_mode = 2
+
+[node name="Resultado" type="Panel" parent="MARGIN_SCREEN/VBoxContainer/Calc_Basis/VBoxContainer" unique_id=360278888]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_xm281")
+
+[node name="MarginContainer" type="MarginContainer" parent="MARGIN_SCREEN/VBoxContainer/Calc_Basis/VBoxContainer/Resultado" unique_id=1401694899]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MARGIN_SCREEN/VBoxContainer/Calc_Basis/VBoxContainer/Resultado/MarginContainer" unique_id=1514393269]
+layout_mode = 2
+
+[node name="Line_op" type="LineEdit" parent="MARGIN_SCREEN/VBoxContainer/Calc_Basis/VBoxContainer/Resultado/MarginContainer/VBoxContainer" unique_id=1712536693]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 62
+placeholder_text = "1234"
+alignment = 1
+editable = false
+context_menu_enabled = false
+emoji_menu_enabled = false
+shortcut_keys_enabled = false
+middle_mouse_paste_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+flat = true
+virtual_keyboard_enabled = false
+
+[node name="Resultados" type="RichTextLabel" parent="MARGIN_SCREEN/VBoxContainer/Calc_Basis/VBoxContainer/Resultado/MarginContainer/VBoxContainer" unique_id=108271684]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 66
+theme_override_font_sizes/bold_font_size = 74
+bbcode_enabled = true
+text = "[b]0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Box_avanzado" type="HBoxContainer" parent="MARGIN_SCREEN/VBoxContainer/Calc_Basis/VBoxContainer" unique_id=278249046]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="Button_Raiz" type="Button" parent="MARGIN_SCREEN/VBoxContainer/Calc_Basis/VBoxContainer/Box_avanzado" unique_id=770758918]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"Resaltado_bt_3"
+theme_override_font_sizes/font_size = 48
+text = "Raiz"
+
+[node name="Button_Parentesis" type="Button" parent="MARGIN_SCREEN/VBoxContainer/Calc_Basis/VBoxContainer/Box_avanzado" unique_id=1561339255]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 48
+text = "()"
+
+[node name="Button_Viceversa" type="Button" parent="MARGIN_SCREEN/VBoxContainer/Calc_Basis/VBoxContainer/Box_avanzado" unique_id=972844322]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"Resaltado_bt_3"
+theme_override_font_sizes/font_size = 48
+text = "+/-"
+
+[node name="Button_Cos" type="Button" parent="MARGIN_SCREEN/VBoxContainer/Calc_Basis/VBoxContainer/Box_avanzado" unique_id=828126204]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 48
+text = "cos"
+
+[node name="Button_Tan" type="Button" parent="MARGIN_SCREEN/VBoxContainer/Calc_Basis/VBoxContainer/Box_avanzado" unique_id=9694439]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"Resaltado_bt_3"
+theme_override_font_sizes/font_size = 48
+text = "tan"
+
+[node name="Cont_Botones" type="Panel" parent="MARGIN_SCREEN/VBoxContainer/Calc_Basis/VBoxContainer" unique_id=1960893994]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.5
+
+[node name="MarginContainer" type="MarginContainer" parent="MARGIN_SCREEN/VBoxContainer/Calc_Basis/VBoxContainer/Cont_Botones" unique_id=1723958275]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="MARGIN_SCREEN/VBoxContainer/Calc_Basis/VBoxContainer/Cont_Botones/MarginContainer" unique_id=566474214]
+layout_mode = 2
+columns = 4
+
+[node name="Button_RESET" type="Button" parent="MARGIN_SCREEN/VBoxContainer/Calc_Basis/VBoxContainer/Cont_Botones/MarginContainer/GridContainer" unique_id=1251806829]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_type_variation = &"Resaltado_bt_1"
+theme_override_font_sizes/font_size = 60
+text = "C"
+
+[node name="Button_DELETE" type="Button" parent="MARGIN_SCREEN/VBoxContainer/Calc_Basis/VBoxContainer/Cont_Botones/MarginContainer/GridContainer" unique_id=1744876125]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_type_variation = &"Resaltado_bt_2"
+theme_override_font_sizes/font_size = 60
+text = "DEL"
+
+[node name="Button_Porcentaje" type="Button" parent="MARGIN_SCREEN/VBoxContainer/Calc_Basis/VBoxContainer/Cont_Botones/MarginContainer/GridContainer" unique_id=1978577635]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_type_variation = &"Resaltado_bt_3"
+theme_override_font_sizes/font_size = 60
+text = "%"
+
+[node name="Button_Dividir" type="Button" parent="MARGIN_SCREEN/VBoxContainer/Calc_Basis/VBoxContainer/Cont_Botones/MarginContainer/GridContainer" unique_id=360803882]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_type_variation = &"Resaltado_bt_3"
+theme_override_font_sizes/font_size = 60
+text = "/"
+
+[node name="Button7" type="Button" parent="MARGIN_SCREEN/VBoxContainer/Calc_Basis/VBoxContainer/Cont_Botones/MarginContainer/GridContainer" unique_id=767433446]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 60
+text = "7"
+
+[node name="Button_8" type="Button" parent="MARGIN_SCREEN/VBoxContainer/Calc_Basis/VBoxContainer/Cont_Botones/MarginContainer/GridContainer" unique_id=401998266]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 60
+text = "8"
+
+[node name="Button_9" type="Button" parent="MARGIN_SCREEN/VBoxContainer/Calc_Basis/VBoxContainer/Cont_Botones/MarginContainer/GridContainer" unique_id=552291319]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 60
+text = "9"
+
+[node name="Button_Multiplicar" type="Button" parent="MARGIN_SCREEN/VBoxContainer/Calc_Basis/VBoxContainer/Cont_Botones/MarginContainer/GridContainer" unique_id=1712070828]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_type_variation = &"Resaltado_bt_3"
+theme_override_font_sizes/font_size = 60
+text = "*"
+
+[node name="Button_4" type="Button" parent="MARGIN_SCREEN/VBoxContainer/Calc_Basis/VBoxContainer/Cont_Botones/MarginContainer/GridContainer" unique_id=1467825727]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 60
+text = "4"
+
+[node name="Button_5" type="Button" parent="MARGIN_SCREEN/VBoxContainer/Calc_Basis/VBoxContainer/Cont_Botones/MarginContainer/GridContainer" unique_id=981267957]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 60
+text = "5"
+
+[node name="Button_6" type="Button" parent="MARGIN_SCREEN/VBoxContainer/Calc_Basis/VBoxContainer/Cont_Botones/MarginContainer/GridContainer" unique_id=1867166448]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 60
+text = "6"
+
+[node name="Button_Sumar" type="Button" parent="MARGIN_SCREEN/VBoxContainer/Calc_Basis/VBoxContainer/Cont_Botones/MarginContainer/GridContainer" unique_id=1295262574]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_type_variation = &"Resaltado_bt_3"
+theme_override_font_sizes/font_size = 60
+text = "+"
+
+[node name="Button_1" type="Button" parent="MARGIN_SCREEN/VBoxContainer/Calc_Basis/VBoxContainer/Cont_Botones/MarginContainer/GridContainer" unique_id=18012732]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 60
+text = "1"
+
+[node name="Button_2" type="Button" parent="MARGIN_SCREEN/VBoxContainer/Calc_Basis/VBoxContainer/Cont_Botones/MarginContainer/GridContainer" unique_id=1280763265]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 60
+text = "2"
+
+[node name="Button_3" type="Button" parent="MARGIN_SCREEN/VBoxContainer/Calc_Basis/VBoxContainer/Cont_Botones/MarginContainer/GridContainer" unique_id=163679174]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 60
+text = "3"
+
+[node name="Button_Restar" type="Button" parent="MARGIN_SCREEN/VBoxContainer/Calc_Basis/VBoxContainer/Cont_Botones/MarginContainer/GridContainer" unique_id=1919469996]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_type_variation = &"Resaltado_bt_3"
+theme_override_font_sizes/font_size = 60
+text = "-"
+
+[node name="Button_Atajo" type="Button" parent="MARGIN_SCREEN/VBoxContainer/Calc_Basis/VBoxContainer/Cont_Botones/MarginContainer/GridContainer" unique_id=1187611421]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_type_variation = &"Resaltado_bt_3"
+theme_override_font_sizes/font_size = 60
+text = "SC"
+
+[node name="Button_0" type="Button" parent="MARGIN_SCREEN/VBoxContainer/Calc_Basis/VBoxContainer/Cont_Botones/MarginContainer/GridContainer" unique_id=78837697]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 60
+text = "0"
+
+[node name="Button_Decimal" type="Button" parent="MARGIN_SCREEN/VBoxContainer/Calc_Basis/VBoxContainer/Cont_Botones/MarginContainer/GridContainer" unique_id=1084785930]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_type_variation = &"Resaltado_bt_3"
+theme_override_font_sizes/font_size = 60
+text = "."
+
+[node name="Button_Resultado" type="Button" parent="MARGIN_SCREEN/VBoxContainer/Calc_Basis/VBoxContainer/Cont_Botones/MarginContainer/GridContainer" unique_id=1010018612]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_type_variation = &"Resaltado_bt_2"
+theme_override_font_sizes/font_size = 60
+text = "="
+
+[node name="Shortcut_Panel" parent="." unique_id=1860198136 instance=ExtResource("5_4gy8t")]
+visible = false
+layout_mode = 1
+
+[connection signal="toggled" from="MARGIN_SCREEN/VBoxContainer/Panel_Modos/Hbox/ScrollContainer/HBoxContainer/BT_AdvancedMode" to="MARGIN_SCREEN/VBoxContainer/Calc_Basis" method="_on_bt_advanced_mode_toggled"]
+[connection signal="pressed" from="MARGIN_SCREEN/VBoxContainer/Calc_Basis/VBoxContainer/Box_avanzado/Button_Raiz" to="MARGIN_SCREEN/VBoxContainer/Calc_Basis" method="_on_button_raiz_pressed"]
+[connection signal="pressed" from="MARGIN_SCREEN/VBoxContainer/Calc_Basis/VBoxContainer/Box_avanzado/Button_Parentesis" to="MARGIN_SCREEN/VBoxContainer/Calc_Basis" method="_on_button_parentesis_pressed"]
+[connection signal="pressed" from="MARGIN_SCREEN/VBoxContainer/Calc_Basis/VBoxContainer/Box_avanzado/Button_Viceversa" to="MARGIN_SCREEN/VBoxContainer/Calc_Basis" method="_on_button_viceversa_pressed"]
+[connection signal="pressed" from="MARGIN_SCREEN/VBoxContainer/Calc_Basis/VBoxContainer/Box_avanzado/Button_Cos" to="MARGIN_SCREEN/VBoxContainer/Calc_Basis" method="_on_button_cos_pressed"]
+[connection signal="pressed" from="MARGIN_SCREEN/VBoxContainer/Calc_Basis/VBoxContainer/Box_avanzado/Button_Tan" to="MARGIN_SCREEN/VBoxContainer/Calc_Basis" method="_on_button_tan_pressed"]

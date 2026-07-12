@@ -1,0 +1,30 @@
+[gd_resource type="Theme" format=3 uid="uid://bfip020jp82km"]
+
+[ext_resource type="FontFile" uid="uid://b5lrntu0l23qf" path="res://AppBuild/Assets/UI/font/Saira-SemiBold.ttf" id="1_h1bm2"]
+[ext_resource type="FontFile" uid="uid://clkeuy4grxtsd" path="res://AppBuild/Assets/UI/font/Saira_SemiExpanded-Medium.ttf" id="2_gkw8g"]
+[ext_resource type="FontFile" uid="uid://dbt117djuankb" path="res://AppBuild/Assets/UI/font/Saira_Expanded-Bold.ttf" id="3_4rp1w"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qufc7"]
+bg_color = Color(0.22584751, 0.5566386, 0.9999984, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vcpxw"]
+bg_color = Color(0.04694529, 0.3263707, 0.99999994, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h1njm"]
+bg_color = Color(0, 0.2574739, 0.5327825, 1)
+
+[resource]
+Button/fonts/font = ExtResource("1_h1bm2")
+LineEdit/colors/caret_color = Color(1, 1, 1, 1)
+LineEdit/colors/font_color = Color(1, 1, 1, 0.83137256)
+LineEdit/colors/font_placeholder_color = Color(0.8745098, 0.8745098, 0.8745098, 0.9098039)
+LineEdit/colors/font_uneditable_color = Color(1, 1, 1, 0.69411767)
+LineEdit/fonts/font = ExtResource("2_gkw8g")
+Resaltado_bt_1/base_type = &"Button"
+Resaltado_bt_1/styles/normal = SubResource("StyleBoxFlat_qufc7")
+Resaltado_bt_2/base_type = &"Button"
+Resaltado_bt_2/styles/normal = SubResource("StyleBoxFlat_vcpxw")
+Resaltado_bt_3/base_type = &"Button"
+Resaltado_bt_3/styles/normal = SubResource("StyleBoxFlat_h1njm")
+RichTextLabel/fonts/bold_font = ExtResource("3_4rp1w")
+RichTextLabel/fonts/normal_font = ExtResource("2_gkw8g")

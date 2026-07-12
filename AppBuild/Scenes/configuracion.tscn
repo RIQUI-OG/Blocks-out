@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://bidt51ay6nrqb"]
+
+[ext_resource type="Theme" uid="uid://bfip020jp82km" path="res://AppBuild/Items/Modern_theme.tres" id="1_2jfe5"]
+[ext_resource type="Script" uid="uid://lphskt6vejos" path="res://AppBuild/Scripts/configuracion.gd" id="1_kcbkb"]
+[ext_resource type="Script" uid="uid://cpc38rcu5fu8n" path="res://AppBuild/Scripts/margin_screen.gd" id="2_2jfe5"]
+
+[node name="Configuracion" type="Control" unique_id=820676672]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_2jfe5")
+script = ExtResource("1_kcbkb")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=883305840]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.12648568, 0.13007072, 0.13417336, 1)
+
+[node name="MARGIN_SCREEN" type="MarginContainer" parent="." unique_id=1507567863]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_2jfe5")
+
+[node name="MarginContainer" type="MarginContainer" parent="MARGIN_SCREEN" unique_id=413787714]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MARGIN_SCREEN/MarginContainer" unique_id=741695253]
+layout_mode = 2
+
+[node name="Titulo" type="RichTextLabel" parent="MARGIN_SCREEN/MarginContainer/VBoxContainer" unique_id=1749272359]
+layout_mode = 2
+theme_override_font_sizes/bold_font_size = 35
+bbcode_enabled = true
+text = "[b]CONFIGURACIÓN"
+fit_content = true
+scroll_active = false
+
+[node name="Settings" type="VBoxContainer" parent="MARGIN_SCREEN/MarginContainer/VBoxContainer" unique_id=1880130772]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MARGIN_SCREEN/MarginContainer/VBoxContainer/Settings" unique_id=395361095]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MARGIN_SCREEN/MarginContainer/VBoxContainer/Settings/HBoxContainer" unique_id=86451916]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Pantalla splash predeterminada"
+
+[node name="OptionBt_Splash" type="OptionButton" parent="MARGIN_SCREEN/MarginContainer/VBoxContainer/Settings/HBoxContainer" unique_id=2076580050]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 26
+selected = 0
+item_count = 3
+popup/item_0/text = "Predeterminada"
+popup/item_0/id = 0
+popup/item_1/text = "Moderna"
+popup/item_1/id = 1
+popup/item_2/text = "Oscura"
+popup/item_2/id = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MARGIN_SCREEN/MarginContainer/VBoxContainer/Settings" unique_id=542464889]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MARGIN_SCREEN/MarginContainer/VBoxContainer/Settings/HBoxContainer2" unique_id=1120398553]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Aspecto visual"
+
+[node name="OptionButton" type="OptionButton" parent="MARGIN_SCREEN/MarginContainer/VBoxContainer/Settings/HBoxContainer2" unique_id=1320561422]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Reiniciar_app" type="Button" parent="MARGIN_SCREEN/MarginContainer/VBoxContainer/Settings" unique_id=40872149]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Reiniciar"
+
+[node name="ButtonClose_Settings" type="Button" parent="MARGIN_SCREEN/MarginContainer/VBoxContainer" unique_id=586205679]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+text = "Salir"
+
+[connection signal="item_selected" from="MARGIN_SCREEN/MarginContainer/VBoxContainer/Settings/HBoxContainer/OptionBt_Splash" to="." method="_on_option_bt_splash_item_selected"]
+[connection signal="pressed" from="MARGIN_SCREEN/MarginContainer/VBoxContainer/Settings/Reiniciar_app" to="." method="_on_reiniciar_app_pressed"]
+[connection signal="pressed" from="MARGIN_SCREEN/MarginContainer/VBoxContainer/ButtonClose_Settings" to="." method="_on_button_close_settings_pressed"]
